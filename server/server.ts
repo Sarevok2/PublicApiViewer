@@ -24,7 +24,7 @@ app.get('/items', (req: express.Request, res: express.Response) => {
         res2.on('end', () => {
             let json = JSON.parse(data);
             console.log('json', json);
-            json = json.sort((item1, item2) => {
+            json = json.sort((item1: any, item2: any) => {
                 if (item1.author > item2.author) return 1;
                 if (item2.author > item1.author) return -1;
                 return 0;
