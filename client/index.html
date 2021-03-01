@@ -2,10 +2,20 @@
 <html>
 <head>
     <script type="text/javascript" src="js/main.js"></script>
+    <style>
+        .hidden {
+            display: none;
+        }
+    </style>
 </head>
-<body onload="getData();">
-    <ul id="item-list">
-
-    </ul>
+<body onload="init()">
+    <div id="login-controls">
+        <button onclick="authNoLogin()">No login</button>
+        <a href="/login" class="btn btn-primary">Log in</a>
+    </div>
+    <div id="artist-info" class="hidden">
+        <input type="text" id="artist-search" />
+        <button onclick="searchArtists()">Search</button>
+    </div>
 </body>
 </html>
